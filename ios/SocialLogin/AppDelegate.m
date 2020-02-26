@@ -13,6 +13,7 @@
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <RNGoogleSignin/RNGoogleSignin.h>
+#import <GoogleMaps/GoogleMaps.h>
 
 
 @implementation AppDelegate
@@ -33,6 +34,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  [GMSServices provideAPIKey:@"AIzaSyBb1ZvWzTnzfw9OYiegfyvuE-xMher32as"];
   RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:self launchOptions:launchOptions];
   RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bridge
                                                    moduleName:@"SocialLogin"
